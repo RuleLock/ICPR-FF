@@ -1,6 +1,12 @@
 import pytesseract
 from PIL import Image
+import os
 
-image = Image.open('./test.jpg')
-code = pytesseract.image_to_string(image, lang='chi_sim')
-print(code)
+path = os.path.abspath(os.path.dirname(__file__))
+path = os.path.join(path, '2.jpg')
+image = Image.open(path)
+
+list = []
+list.append('aa')
+print(list.__len__())
+
