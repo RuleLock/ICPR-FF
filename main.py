@@ -16,6 +16,7 @@ for image in image_file_list:
     char_dict = ocr.get_dict(image_path)
     if char_dict is None:
         print('No.%d. %s error.' % (current_count, image))
+        current_count += 1
         continue
     result_list = read.get_text_rect(char_dict)
     file_path = os.path.abspath(os.path.dirname(__file__))
