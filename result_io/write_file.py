@@ -6,3 +6,4 @@ def write(file_path, text):
     file = open(file_path, mode='a+', encoding='utf-8')
     file.write(text)
     file.write('\n')
+    file.close()
