@@ -14,7 +14,7 @@ current_count = 1
 for image in image_file_list:
     image_path = os.path.join(image_dir_path, image)
     char_dict = ocr.get_dict(image_path)
-    print(char_dict)
+    # print(char_dict)
     if char_dict is None:
         print('No.%d. %s error.' % (current_count, image))
         current_count += 1
